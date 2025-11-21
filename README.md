@@ -5,19 +5,19 @@ This code repsitory was used for the submission as finalist of the PJDSC2025 con
 # AGOS: Aid & Goods Optimization System
 
 For the application to work, all the files within the finals folder must all be in the same working directory. 
-In terminal, firt compile the c++ code
+In terminal, first compile the c++ code
 
     g++ -std=c++20 main.cpp solver.cpp -o solver_app
 
 Then, run the streamlit command in terminal to run the program
 
     streamlit run dashboard.py 
-Note: streamlit extension must be installed by the uesr
+Note: streamlit extension must be installed by the user
 
 Dashboard Walkthrough
 
 WARNING: USING THE CURRENT MAP AND NODES PROVIDED, IT TAKES A SIGNIFICANT AMOUNT OF TIME TO RUN THE OUTPUT (>4 HOURS)
-Therefore it is advisable to use the sample map built into the code to test an output
+Therefore, it is advisable to use the sample map built into the code to test an output
 
 # Side Panel
 
@@ -25,7 +25,7 @@ On the side panel, 3 settings will be presented to the user
 
 ## Setting 1: Data input
 
-The user may choose to use a JSON save file from a previously ran solution or input csv files. Otherwise, a default map will be presented which provides a number of depots, shelter , and connector nodes. From here, the user may immedately move on to the next settings should they choose to use this map. 
+The user may choose to use a JSON save file from a previously ran solution or input csv files. Otherwise, a default map will be presented which provides a number of depots, shelter, and connector nodes. From here, the user may immediately move on to the next settings should they choose to use this map. 
 
 Otherwise, the user may upload two csv files
  - "nodes" csv file with columns: 
@@ -55,7 +55,7 @@ The user selects the type of heuristic based on the paper from
 
 Anuar, W. K., Lee, L. S., Seow, H.-V., & Pickl, S. (2022). A Multi-Depot Dynamic Vehicle Routing Problem with Stochastic Road Capacity: An MDP Model and Dynamic Policy for Post-Decision State Rollout Algorithm in Reinforcement Learning.
 
-The user can set the number of simulations that the selected heuristic will run to check the most optimal solution amongst the number of simulations. The most optimal according to the paper is the fourth heuristic, however the user may test the other heuristics to according to their needs
+The user can set the number of simulations that the selected heuristic will run to check the most optimal solution amongst the number of simulations. The most optimal, according to the paper, is the fourth heuristic, however, the user may test the other heuristics according to their needs
 
 WARNING THE HEURISTICS ARE VERY COMPUTATIONALLY HEAVY AND WILL TAKE A VERY LONG TIME TO LOAD ON A LARGE GRAPH
 
@@ -69,18 +69,18 @@ The user manually assigns the number of vehicles, the capacity of each vehicle a
 
 # Map 
 
-In the middle of the dashboard, a map of the nodes and the edges connecting them is presented. The user is presented with a map of the nodes as well as a visualization of the depot cars moving towards their respective destinations. Below this map is a table that displays the unserved which will update in real time according to the map.
+In the middle of the dashboard, a map of the nodes and the edges connecting them is presented. The user is presented with a map of the nodes as well as a visualization of the depot cars moving towards their respective destinations. Below this map is a table that displays the unserved, which will update in real time according to the map.
 
-The second map is used to display the full route of each vehicle as well as the routes of the vehicles as a collectiv. Each route can be toggled by double clicking on the legend.
+The second map is used to display the full route of each vehicle as well as the routes of the vehicles as a collectiv. Each route can be toggled by double-clicking on the legend.
 
 # Statistics
 
 Below the map are the following statistics presented:
 - Route history of each vehicle
 - Timestamp when each shelter has been served and by which vehicle
-- The depots and the number of times each vehicle resupplied at each depot
+- The depots and the number of times each vehicle is resupplied at each depot
 
-These statistics are meant for user to gain insight and provide an adequate response based on the simulation
+These statistics are meant for users to gain insight and provide an adequate response based on the simulation
 
 # Option to save to JSON file
 
